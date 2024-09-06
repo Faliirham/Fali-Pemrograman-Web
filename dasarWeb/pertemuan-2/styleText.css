@@ -2,8 +2,10 @@
     text-align: center;
     text-decoration: underline;
     color: blue;
+    letter-spacing: 5px;
 }
 .par1{
+    letter-spacing: 5px;
     color: blue;
     text-align: center;
     text-decoration: underline;
