@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-        <title>format text CSS</title>
-        <link rel="stylesheet" type="text/css" href="styleText.css">
+        <title>Position CSS</title>
+        <link rel="stylesheet" type="text/css" href="stylePosition.css">
     </head>
 
     <body>
-        <P class="tulisan_warna">Mengatur format text dengan CSS</P>
-        <p class="par1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Hic sequi est consequuntur! Veniam facere quidem tempora dolorem ut ex? 
-            Labore tempore consequatur perferendis inventore placeat numquam animi hic assumenda. 
-            Itaque nisi, repellendus voluptas velit quis quas illo accusamus iste pariatur explicabo quae cumque dolor recusandae nemo omnis. 
-            \Dolorem, fugiat laboriosam voluptatibus minus nulla voluptates dicta obcaecati molestiae? 
-            Eum non doloremque iure explicabo neque ratione porro repellendus, odio quos, dolorum reprehenderit debitis totam in corporis. 
-            Sed, neque? Alias, vitae tempora debitis, ipsa reprehenderit eius error laborum numquam id quisquam incidunt nulla optio facilis quas, 
-            magnam architecto eaque molestias nemo. Exercitationem, porro!
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Hic sequi est consequuntur! Veniam facere quidem tempora dolorem ut ex? 
-            Labore tempore consequatur perferendis inventore placeat numquam animi hic assumenda. 
-            Itaque nisi, repellendus voluptas velit quis quas illo accusamus iste pariatur explicabo quae cumque dolor recusandae nemo omnis. 
-            \Dolorem, fugiat laboriosam voluptatibus minus nulla voluptates dicta obcaecati molestiae? 
-            Eum non doloremque iure explicabo neque ratione porro repellendus, odio quos, dolorum reprehenderit debitis totam in corporis. 
-            Sed, neque? Alias, vitae tempora debitis, ipsa reprehenderit eius error laborum numquam id quisquam incidunt nulla optio facilis quas, 
-            magnam architecto eaque molestias nemo. Exercitationem, porro!
+        <h2>postition: static;</h2>
 
+        <p>Position static digunakan untuk mengatur element menjadi statis secara default.
+            Elemen akan mengikuti posisi normal secara default,
+            elemen tidak dipengaruhi oleh properti seperti top, bottom, left dan right.:
         </p>
+
+        <div class="static"> 
+            Elemen ini diatur menggunakan posisi: static;
+        </div>
+        <br><br><br>
+        <h2>postition: relative;</h2>
+
+        <p>Sebuah element HTML yang menggunakan position realtive akan terletak pada posisi normal.
+            Mengatur properti atas, kanan, bawah, dan kiri dari elemen yang diposisikan dengan "relatif"
+            akan membuatnya jauh dari posisi normalnya.
+            Konten lain tidak akan disesuaikan agar sesuai dengan celah yang ditinggalkan oleh elemen tersebut.:
+        </p>
+
+        <div class="relative"></div>
+            Elemen ini diatur menggunakan posisi: relative;
+        </div>
+        <br><br><br>
+        <h2>postition: fixed;</h2>
+
+        <p>Sebuah element HTML yang di setting position fixed akan memiliki sifat tetap,
+            tanpa ada perubahan bahkan jika halama website di scroll.
+            Berlaku pengaturan left, bottom, top dan right pada position fixed 
+        </p>
+
+        <div class="fixed"></div>
+            Elemen ini diatur menggunakan posisi: fixed;
+        </div>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+
+        <h2>postition: absolute;</h2>
+
+        <p>Element HTML yang menggunakan position absolute akan diposisikan relatif dengan 
+            elemen lain yang mendahuluinya yang terdekat,
+            bukan relatif terhadap layar secara normal.:
+        </p>
+
+        <div class="realtive1"></div>
+            Elemen ini diatur menggunakan posisi:relative;
+        <div class="absolute"></div>
+            Elemen ini diatur menggunakan posisi: absolute;
+        </div>
+
+        <br><br><br>
+        <br><br><br>
+        
+        <h2>posrition: sticky;</h2>
+        <p>Cobalah untuk <b>scroll</b> untuk mengetahui bagaimana posisi sticky bekerja.</p>
+        <p>Catatan: IE/Edge 15 dan versi yang lebih lama tidak mendukung sticky</p>
+
+        <div class="sticky">Hola Aku adalah sticky</div>
+
+        <div style="padding-bottom: 2000px">
+            <p>Dalam contoh ini, elemen sticky menempel pada posisi paling atas halaman (top:0),
+                ketika mencapai posisi scrollnya</p>
+            <p>Cobalah untuk melakukan scroll</p>
+            <p>Cobalah untuk melakukan scroll.. Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Repellendus eligendi quo magni ex odit similique maiores, nisi molestias maxime, 
+                omnis autem architecto iusto dolores eaque eum perferendis sunt vero nulla.</p>
+            <p>Cobalah untuk melakukan scroll.. Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Repellendus eligendi quo magni ex odit similique maiores, nisi molestias maxime, 
+                omnis autem architecto iusto dolores eaque eum perferendis sunt vero nulla.</p>
+        </div>
     </body>
     
 </html>
