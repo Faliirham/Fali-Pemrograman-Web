@@ -1,20 +1,56 @@
-html, body{
-    margin: o;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ddd;
+    background-color: #f0f0f0; 
     line-height: 1.65;
-    padding-bottom: 1000px;
 }
 
-.container-satu{
+.container-satu {
     width: 800px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #ffffff; 
     padding: 20px;
-    box-sizing: border-box;
     display: flex;
+    gap: 20px;
+}
+
+.kolom-utama {
+    flex: 3;
+    background-color: #4e73df; 
+    padding: 40px;
+    color: white;
+    border-radius: 8px;
+}
+
+.sidebar-satu {
+    flex: 1;
+    background-color: #f6c23e; 
+    padding: 40px;
+    color: #333; 
+    border-radius: 8px;
+}
+
+.sidebar-dua {
+    background-color: #36b9cc; 
+    flex: 1;
+    padding: 20px;
+    color: #333;
+    border-radius: 8px;
+}
+
+h2, h3 {
+    color: #f8f9fc; 
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
 }
