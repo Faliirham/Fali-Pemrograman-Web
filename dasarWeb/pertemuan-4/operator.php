@@ -25,4 +25,7 @@
     $a *= $b;
     $a /= $b;
     $a %= $b;
+
+    $hasilIdentik = $a === $b;
+    $hasilTidakIdentik = $a!== $b;
 ?>
