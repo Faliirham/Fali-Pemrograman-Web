@@ -28,4 +28,16 @@
 
     $hasilIdentik = $a === $b;
     $hasilTidakIdentik = $a!== $b;
+
+    //SOAL NO 3.6 
+    //Sebuah restoran memiliki 45 kursi di dalamnya. Pada suatu malam,
+    // 28 kursi telah ditempati oleh pelanggan. Berapa persen kursi yang masih kosong di restoran tersebut?\
+    // Kode Program : 
+
+    $kursiRestoran = 45;
+    $kursiTempati = 28;
+    $kursiKosong = $kursiRestoran - $kursiTempati;
+    $persentaseKosong = $kursiKosong / $kursiRestoran * 100;
+
+    echo "Persentase kursi kosong: " . $persentaseKosong .  "%";
 ?>
