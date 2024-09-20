@@ -54,4 +54,32 @@ foreach ($nilaiMahasiswa as $nilai){
     }
     echo "Nilai: $nilai (Lulus) <br>";
 }
+
+//Soal No 4.6
+$nilaiSiswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
+
+// Mengurutkan Nilai 
+for ($i = 0; $i < count($nilaiSiswa); $i++) {
+    for ($j = 0; $j < count($nilaiSiswa) - 1; $j++) {
+        if ($nilaiSiswa[$j] > $nilaiSiswa[$j + 1]) {
+            $temp = $nilaiSiswa[$j];
+            $nilaiSiswa[$j] = $nilaiSiswa[$j + 1];
+            $nilaiSiswa[$j + 1] = $temp;
+        }
+    }
+}
+//Mentotal Nilai 
+$totalNilai = 0;
+$jumlahNilai = 0;
+
+for ($i = 2; $i < 8; $i++) { 
+    $totalNilai += $nilaiSiswa[$i];
+    $jumlahNilai++;
+}
+//Mencari rata rata
+$rataRata = $totalNilai / $jumlahNilai;
+
+echo "Total nilai setelah mengabaikan dua nilai tertinggi dan terendah adalah: $totalNilai <br>";
+echo "Rata-rata nilai adalah: $rataRata";
+
 ?>
