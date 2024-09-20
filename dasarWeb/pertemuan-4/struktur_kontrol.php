@@ -82,4 +82,16 @@ $rataRata = $totalNilai / $jumlahNilai;
 echo "Total nilai setelah mengabaikan dua nilai tertinggi dan terendah adalah: $totalNilai <br>";
 echo "Rata-rata nilai adalah: $rataRata";
 
+
+// Soal No 4.7
+$pembelian = 120000;
+$hargaBayar = $pembelian;
+
+if ($pembelian >= 100000) {
+    $hargaBayar = $pembelian - ($pembelian * (20 / 100)); 
+}
+
+echo "Harga yang harus dibayar pembeli sebesar Rp. $hargaBayar";
+?>
+
 ?>
