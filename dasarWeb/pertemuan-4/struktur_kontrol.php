@@ -92,6 +92,10 @@ if ($pembelian >= 100000) {
 }
 
 echo "Harga yang harus dibayar pembeli sebesar Rp. $hargaBayar";
-?>
 
+// Soal No 4.8
+$poin = 520; 
+
+echo "Total skor pemain adalah: " . $poin . "<br>";
+echo "Apakah pemain mendapatkan hadiah tambahan? " . ($poin > 500 ? "YA" : "TIDAK");
 ?>
