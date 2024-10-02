@@ -10,4 +10,5 @@ echo '<pre>Halo\tDunia!</pre>';
 echo "Katakanlah \"Tidak pada narkoba!!\" <br/>";
 echo 'Katakanlah \'Tidak pada narkoba!!\' <br/>';
 
+
 ?>
