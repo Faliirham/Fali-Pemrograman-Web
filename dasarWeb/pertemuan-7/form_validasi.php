@@ -15,6 +15,10 @@
             <input type="email" id="email" name="email">
             <span id="email-error" style="color:red;"></span><br><br>
 
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="password-error" style="color:red;"></span><br><br>
+
             <input type="submit" value="Submit">
         </form>
 
@@ -23,10 +27,11 @@
         <script>
             $(document).ready(function() {
                 $("#myForm").submit(function(event) {
-                    event.preventDefault(); // Tambahkan ini untuk mencegah submit default
+                    event.preventDefault();
 
                     var nama = $('#nama').val();
                     var email = $('#email').val();
+                    var password = $('#password').val();
                     var valid = true;
 
                     if (nama === "") {
@@ -41,6 +46,13 @@
                         valid = false;
                     } else {
                         $('#email-error').text("");
+                    }
+
+                    if (password.length < 8) {
+                        $('#password-error').text("Password harus minimal 8 karakter.");
+                        valid = false;
+                    } else {
+                        $('#password-error').text("");
                     }
 
                     if (valid) {
