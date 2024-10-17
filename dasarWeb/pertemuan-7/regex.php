@@ -37,4 +37,15 @@ if (preg_match($pattern, $text, $matches)){
 }else{
     echo "Tidak ada yang cocok";
 }
+echo "<br>";
+//Soal 5.5 
+$pattern = '/go?d/'; 
+$text = 'god is good.';
+if (preg_match($pattern, $text, $matches)) {
+    echo "Cocokkan: " . $matches[0]."<br>";
+} else {
+    echo "Tidak ada yang cocok!<br>";
+}
+
+echo "<br>";
 ?>
