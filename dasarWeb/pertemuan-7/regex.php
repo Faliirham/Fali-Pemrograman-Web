@@ -42,10 +42,18 @@ echo "<br>";
 $pattern = '/go?d/'; 
 $text = 'god is good.';
 if (preg_match($pattern, $text, $matches)) {
-    echo "Cocokkan: " . $matches[0]."<br>";
+    echo "Cocokkan: " . $matches[0];
 } else {
     echo "Tidak ada yang cocok!<br>";
 }
 
 echo "<br>";
+// Soal 5.6 
+$pattern = '/{n,m}/';
+$text = 'god is good';
+if (preg_match($pattern, $text, $matches)){
+    echo "Cocokkan: ".$matches[0];
+}else{
+    echo "Tidak ada yang cocok";
+}
 ?>
