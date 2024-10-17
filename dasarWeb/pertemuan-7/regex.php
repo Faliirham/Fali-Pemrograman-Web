@@ -1,4 +1,5 @@
 <?php
+//Soal 5.1
 $pattern = '/[a-z]/';
 $text = 'This is a Sample Text.';
 
@@ -9,7 +10,7 @@ if (preg_match($pattern, $text)){
 }
 
 echo "<br>";
-
+//Soal 5.2
 $pattern = '/[0-9]+/';
 $text = 'There are 123 apples.';
 if (preg_match($pattern, $text, $matches)){
@@ -17,4 +18,14 @@ if (preg_match($pattern, $text, $matches)){
 }else{
     echo "Tidak adayang cocok";
 }
+
+echo "<br>";
+//Soal 5.3
+$pattern = '/apple/';
+$replacement = 'banana';
+$text = 'I like apple pie';
+$new_text = preg_replace($pattern, $replacement, $text);
+
+echo $new_text;
+
 ?>
