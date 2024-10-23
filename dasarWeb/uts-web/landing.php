@@ -22,10 +22,10 @@ if (!isset($_SESSION['username'])) {
         <h2>Features</h2>
         <ul>
             <li><a href="outlets.php">Outlets</a></li>
-            <li><a href="outlet_popularity.php">Keramaian Outlet</a></li>
+            <li><a href="outletRamai.php">Keramaian Outlet</a></li>
             <li><a href="favorite_menus.php">Menu Favorit</a></li>
             <li><a href="outlet_ratings.php">Rating Outlet</a></li>
-            <li><a href="staff_list.php">List Staff</a></li>
+            <li><a href="staff_list.php">Daftar Staff</a></li>
         </ul>
 
         <a href="logout.php" class="logout">Logout</a>

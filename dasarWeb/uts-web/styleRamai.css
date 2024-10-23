@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Slightly lighter background for better contrast */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the content */
+    position: relative; /* Position for absolute children */
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 10px; /* Space below headings */
+    text-align: center; /* Center align the headings */
+}
+
+form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for form */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure the form takes full width */
+    max-width: 500px; /* Limit the width for better appearance */
+}
+
+input[type="date"],
+input[type="number"],
+select {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ced4da; /* Soft gray border */
+    border-radius: 5px;
+    width: calc(100% - 24px); /* Adjust width for padding */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #007bff; /* Blue border on focus */
+}
+
+button {
+    padding: 12px 15px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Make button full width */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+table {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit the width for better appearance */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above the table */
+    background-color: #ffffff; /* White background for the table */
+    border-radius: 8px; /* Rounded corners for table */
+    overflow: hidden; /* Prevent overflow for rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; /* Light gray border for table rows */
+}
+
+th {
+    background-color: #007bff; /* Blue header */
+    color: white; /* White text for header */
+    font-weight: bold; /* Bold font for header */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Light gray background on row hover */
+}
+
+td {
+    color: #495057; /* Dark gray text for better readability */
+}
+
+.back-button {
+    position: absolute; /* Keep the button absolute positioned */
+    top: 20px; /* Adjust vertical position */
+    left: 20px; /* Adjust horizontal position */
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
