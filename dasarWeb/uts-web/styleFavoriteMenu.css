@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+}
+
+li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #28a745;
+}
+
+.outlet-name {
+    font-style: italic;
+    color: #6c757d;
+}
+
+.info {
+    margin: 5px 0;
+}
+
+.filter-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-form select {
+    margin: 0 5px;
+    padding: 5px;
+}
+.back-button {
+    position: absolute; /* Make the button absolute positioned */
+    top: 20px; /* Adjust vertical position */
+    left: 20px; /* Adjust horizontal position */
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

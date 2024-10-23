@@ -44,7 +44,7 @@ $outlets = query("SELECT * FROM dbo.Outlets");
 <head>
     <meta charset="UTF-8">
     <title>Manage Outlets</title>
-    <link rel="stylesheet" href="styleOutlets.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styleOutlets.css"> 
 </head>
 <body>
     <div class="container"> 
