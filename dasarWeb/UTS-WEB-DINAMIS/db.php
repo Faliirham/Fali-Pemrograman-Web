@@ -1,13 +1,10 @@
 <?php
-$host = 'localhost';
-$dbname = 'cafe_system';
-$user = 'root';
-$pass = '';
-
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    // Menggunakan DSN untuk SQL Server dengan format yang benar
+    $pdo = new PDO("sqlsrv:server=YERIMI\\SQLEXPRESS;database=cafe_system");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Koneksi ke database berhasil!";
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    die("Koneksi ke database gagal: " . $e->getMessage());
 }
 ?>
