@@ -44,13 +44,15 @@ $favorites = query($query, $params);
             <select name="week">
                 <option value="">Select Week</option>
                 <?php for ($i = 1; $i <= 52; $i++): ?>
-                    <option value="<?php echo $i; ?>" <?php echo ($selected_week == $i) ? 'selected' : ''; ?>>Week <?php echo $i; ?></option>
+                    <option value="<?php echo $i; ?>" <?php echo ($selected_week == $i) ? 'selected' : ''; ?>>
+                        Week <?php echo $i; ?></option>
                 <?php endfor; ?>
             </select>
             <select name="month">
                 <option value="">Select Month</option>
                 <?php for ($i = 1; $i <= 12; $i++): ?>
-                    <option value="<?php echo $i; ?>" <?php echo ($selected_month == $i) ? 'selected' : ''; ?>>Month <?php echo $i; ?></option>
+                    <option value="<?php echo $i; ?>" <?php echo ($selected_month == $i) ? 'selected' : ''; ?>>
+                        Month <?php echo $i; ?></option>
                 <?php endfor; ?>
             </select>
             <select name="year">
@@ -58,7 +60,8 @@ $favorites = query($query, $params);
                 <?php 
                 $current_year = date("Y");
                 for ($i = $current_year - 5; $i <= $current_year + 5; $i++): ?>
-                    <option value="<?php echo $i; ?>" <?php echo ($selected_year == $i) ? 'selected' : ''; ?>><?php echo $i; ?></option>
+                    <option value="<?php echo $i; ?>" <?php echo ($selected_year == $i) ? 'selected' : ''; ?>>
+                        <?php echo $i; ?></option>
                 <?php endfor; ?>
             </select>
             <button type="submit">Filter</button>

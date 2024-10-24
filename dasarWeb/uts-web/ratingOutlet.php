@@ -48,7 +48,8 @@ try {
     <select id="ratingFilter" onchange="filterTable()">
         <option value="">--Select Rating--</option>
         <?php foreach ($ratings as $rating) { ?>
-            <option value="<?php echo htmlspecialchars($rating); ?>"><?php echo htmlspecialchars($rating); ?></option>
+            <option value="<?php echo htmlspecialchars($rating); ?>">
+                <?php echo htmlspecialchars($rating); ?></option>
         <?php } ?>
     </select>
 

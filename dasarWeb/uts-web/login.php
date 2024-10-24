@@ -1,7 +1,9 @@
 <?php
+//Session Start dan Koneksi Database
 session_start();
 require 'database.php';
 
+//Proses Login (Handle Request POST)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];

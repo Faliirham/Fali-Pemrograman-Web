@@ -53,7 +53,8 @@ $stmt->execute();
         <select name="outlet" id="outlet">
             <option value="">--Select Outlet--</option>
             <?php while ($outlet = $outlets_result->fetch()) { ?>
-                <option value="<?php echo $outlet['OutletID']; ?>" <?php if ($selected_outlet == $outlet['OutletID']) echo 'selected'; ?>>
+                <option value="<?php echo $outlet['OutletID']; ?>" 
+                <?php if ($selected_outlet == $outlet['OutletID']) echo 'selected'; ?>>
                     <?php echo $outlet['OutletName']; ?>
                 </option>
             <?php } ?>
@@ -62,13 +63,20 @@ $stmt->execute();
         <label for="workday">Filter by Work Day:</label>
         <select name="workday" id="workday">
             <option value="">--Select Day--</option>
-            <option value="Monday" <?php if ($selected_workday == 'Monday') echo 'selected'; ?>>Monday</option>
-            <option value="Tuesday" <?php if ($selected_workday == 'Tuesday') echo 'selected'; ?>>Tuesday</option>
-            <option value="Wednesday" <?php if ($selected_workday == 'Wednesday') echo 'selected'; ?>>Wednesday</option>
-            <option value="Thursday" <?php if ($selected_workday == 'Thursday') echo 'selected'; ?>>Thursday</option>
-            <option value="Friday" <?php if ($selected_workday == 'Friday') echo 'selected'; ?>>Friday</option>
-            <option value="Saturday" <?php if ($selected_workday == 'Saturday') echo 'selected'; ?>>Saturday</option>
-            <option value="Sunday" <?php if ($selected_workday == 'Sunday') echo 'selected'; ?>>Sunday</option>
+            <option value="Monday" <?php if ($selected_workday == 'Monday') 
+            echo 'selected'; ?>>Monday</option>
+            <option value="Tuesday" <?php if ($selected_workday == 'Tuesday') 
+            echo 'selected'; ?>>Tuesday</option>
+            <option value="Wednesday" <?php if ($selected_workday == 'Wednesday') 
+            echo 'selected'; ?>>Wednesday</option>
+            <option value="Thursday" <?php if ($selected_workday == 'Thursday') 
+            echo 'selected'; ?>>Thursday</option>
+            <option value="Friday" <?php if ($selected_workday == 'Friday') 
+            echo 'selected'; ?>>Friday</option>
+            <option value="Saturday" <?php if ($selected_workday == 'Saturday') 
+            echo 'selected'; ?>>Saturday</option>
+            <option value="Sunday" <?php if ($selected_workday == 'Sunday') 
+            echo 'selected'; ?>>Sunday</option>
         </select>
 
         <button type="submit">Filter</button>

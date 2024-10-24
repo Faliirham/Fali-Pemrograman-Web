@@ -65,7 +65,8 @@ $outlets = query("SELECT * FROM dbo.Outlets");
                     <span><?php echo htmlspecialchars($outlet['OutletName']); ?> - <?php echo htmlspecialchars($outlet['Address']); ?></span>
                     <div>
                         <a href="?delete=<?php echo $outlet['OutletID']; ?>">Delete</a>
-                        <a href="#" onclick="editOutlet(<?php echo $outlet['OutletID']; ?>, '<?php echo addslashes(htmlspecialchars($outlet['OutletName'])); ?>', '<?php echo addslashes(htmlspecialchars($outlet['Address'])); ?>')">Edit</a>
+                        <a href="#" onclick="editOutlet(<?php echo $outlet['OutletID']; ?>, '<?php echo addslashes(htmlspecialchars($outlet['OutletName'])); ?>'
+                        , '<?php echo addslashes(htmlspecialchars($outlet['Address'])); ?>')">Edit</a>
                     </div>
                 </li>
             <?php endforeach; ?>

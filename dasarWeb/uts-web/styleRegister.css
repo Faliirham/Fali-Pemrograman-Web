@@ -5,7 +5,7 @@ body, h2, p {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    background-color: #e6f2e1; 
     color: #333;
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
 
 .registration-container h2 {
     margin-bottom: 20px;
-    color: #4A90E2;
+    color: #4A7C2A; 
 }
 
 .registration-container input[type="text"],
@@ -32,7 +32,7 @@ body {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c8d6c3; 
     border-radius: 4px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
@@ -40,14 +40,14 @@ body {
 
 .registration-container input[type="text"]:focus,
 .registration-container input[type="password"]:focus {
-    border-color: #4A90E2;
+    border-color: #4A7C2A; 
     outline: none;
 }
 
 .registration-container input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #4A90E2;
+    background-color: #4A7C2A; 
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -57,7 +57,7 @@ body {
 }
 
 .registration-container input[type="submit"]:hover {
-    background-color: #357ABD;
+    background-color: #357A2A; 
 }
 
 .registration-container div {

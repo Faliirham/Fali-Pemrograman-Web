@@ -52,21 +52,26 @@ $crowdData = query($sql, $params);
             <?php
             $outlets = query("SELECT DISTINCT OutletID FROM CrowdData");
             foreach ($outlets as $outlet) {
-                echo '<option value="' . htmlspecialchars($outlet['OutletID']) . '"' . ($outlet['OutletID'] == $outlet_id_filter ? ' selected' : '') . '>' . htmlspecialchars($outlet['OutletID']) . '</option>';
+                echo '<option value="' . htmlspecialchars($outlet['OutletID']) . '"' 
+                . ($outlet['OutletID'] == $outlet_id_filter ? ' selected' : '') . '>' 
+                . htmlspecialchars($outlet['OutletID']) . '</option>';
             }
             ?>
         </select>
         
-        <input type="date" name="date" value="<?php echo htmlspecialchars($date_filter); ?>" placeholder="Select Date">
+        <input type="date" name="date" value="<?php echo htmlspecialchars($date_filter); 
+        ?>" placeholder="Select Date">
         
-        <input type="number" name="hour" value="<?php echo htmlspecialchars($hour_filter); ?>" placeholder="Visit Hour">
+        <input type="number" name="hour" value="<?php echo htmlspecialchars($hour_filter); 
+        ?>" placeholder="Visit Hour">
         
    
         <select name="month">
             <option value="">Select Month</option>
             <?php
             for ($m = 1; $m <= 12; $m++) {
-                echo '<option value="' . $m . '"' . ($m == $month_filter ? ' selected' : '') . '>' . date('F', mktime(0, 0, 0, $m, 1)) . '</option>';
+                echo '<option value="' . $m . '"' . ($m == $month_filter ? ' selected' : '') 
+                . '>' . date('F', mktime(0, 0, 0, $m, 1)) . '</option>';
             }
             ?>
         </select>
@@ -76,8 +81,9 @@ $crowdData = query($sql, $params);
             <option value="">Select Year</option>
             <?php
             $currentYear = date("Y");
-            for ($y = $currentYear; $y >= $currentYear - 10; $y--) { // Adjust range as needed
-                echo '<option value="' . $y . '"' . ($y == $year_filter ? ' selected' : '') . '>' . $y . '</option>';
+            for ($y = $currentYear; $y >= $currentYear - 10; $y--) { 
+                echo '<option value="' . $y . '"' . ($y == $year_filter ? ' selected' : '') . '>' 
+                . $y . '</option>';
             }
             ?>
         </select>
