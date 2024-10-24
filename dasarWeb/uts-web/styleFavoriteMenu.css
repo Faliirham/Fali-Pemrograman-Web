@@ -1,70 +1,91 @@
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2e1; /* Matcha background */
     color: #343a40;
     margin: 0;
     padding: 20px;
 }
 
+/* Main heading */
 h1 {
     text-align: center;
-    color: #007bff;
+    color: #4A7C2A; /* Matcha green */
     margin-bottom: 30px;
+    font-size: 2em; /* Larger font size for emphasis */
 }
 
+/* List styles */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* List item styling */
 li {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
     padding: 15px;
     margin-bottom: 15px;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, transform 0.2s; /* Transition for shadow and scale */
 }
 
 li:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
+/* Menu name styling */
 .menu-name {
     font-weight: bold;
     font-size: 1.2em;
-    color: #28a745;
+    color: #28a745; /* Matcha green for emphasis */
 }
 
+/* Outlet name styling */
 .outlet-name {
     font-style: italic;
-    color: #6c757d;
+    color: #6c757d; /* Gray color for outlet name */
 }
 
+/* Info styling */
 .info {
     margin: 5px 0;
 }
 
+/* Filter form styling */
 .filter-form {
     margin-bottom: 20px;
     text-align: center;
 }
 
+/* Filter form select styling */
 .filter-form select {
     margin: 0 5px;
-    padding: 5px;
+    padding: 10px; /* More padding for better appearance */
+    border: 1px solid #c8d6c3; /* Light green border */
+    border-radius: 5px; /* Consistent border radius */
+    transition: border-color 0.3s; /* Transition for border color */
 }
+
+.filter-form select:focus {
+    border-color: #4A7C2A; /* Darker matcha on focus */
+}
+
+/* Back button styling */
 .back-button {
-    position: absolute; /* Make the button absolute positioned */
+    position: absolute; /* Absolute positioning */
     top: 20px; /* Adjust vertical position */
     left: 20px; /* Adjust horizontal position */
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #4A7C2A; /* Matcha green */
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for background color */
 }
 
 .back-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #5e7d5a; /* Darker shade on hover */
 }

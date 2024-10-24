@@ -7,25 +7,25 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLanding.css">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="styleLanding.css"> 
+    
 </head>
 <body>
-    <div class="container"> <!-- Added container for layout -->
-        <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
-        <p>This is the landing page.</p>
+    <div class="container"> 
+        <h1>Selamat Datang, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
 
-        <h2>Features</h2>
+        <h2>CAFE CONTROLLING ASSISTANT</h2>
         <ul>
             <li><a href="outlets.php">Outlets</a></li>
             <li><a href="outletRamai.php">Keramaian Outlet</a></li>
             <li><a href="favorite_menus.php">Menu Favorit</a></li>
             <li><a href="ratingOutlet.php">Rating Outlet</a></li>
-            <li><a href="staff_list.php">Daftar Staff</a></li>
+            <li><a href="staffOutlet.php">Daftar Staff</a></li>
         </ul>
 
         <a href="logout.php" class="logout">Logout</a>

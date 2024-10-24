@@ -1,85 +1,123 @@
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2e1; /* Matcha background */
     margin: 0;
     padding: 20px;
     text-align: center; /* Center content */
 }
 
+/* Heading styles */
 h2 {
-    color: #333;
+    color: #4A7C2A; /* Matcha green */
     margin-bottom: 20px;
+    font-size: 2em; /* Larger font size for emphasis */
+    animation: fadeIn 0.5s ease-in-out; /* Animation for headings */
 }
 
+/* Back button styles */
 .back-button {
-    position: absolute;
-    top: 20px; 
-    left: 20px; 
+    position: absolute; /* Absolute positioning */
+    top: 20px; /* Adjust vertical position */
+    left: 20px; /* Adjust horizontal position */
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #4A7C2A; /* Matcha green */
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
 }
 
 .back-button:hover {
-    background-color: #0056b3; 
+    background-color: #5e7d5a; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
+/* Dropdown container styles */
 .dropdown-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
+/* Label styles */
 label {
     font-size: 16px;
     margin-right: 10px;
     align-self: center; /* Center label vertically */
+    color: #333; /* Dark gray for better readability */
 }
 
+/* Dropdown filter styles */
 #ratingFilter {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #c8d6c3; /* Light green border */
+    border-radius: 5px; /* Rounded corners */
     font-size: 16px;
     width: 200px; /* Set a fixed width for the dropdown */
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding and border in width */
+    transition: border-color 0.3s, transform 0.2s; /* Smooth transition for border color and transform */
 }
 
+#ratingFilter:focus {
+    border-color: #4A7C2A; /* Darker matcha on focus */
+    transform: scale(1.02); /* Slightly enlarge dropdown on focus */
+}
+
+/* Styled table styles */
 .styled-table {
     width: 80%;
     margin: 0 auto; /* Center the table */
-    border-collapse: collapse;
+    border-collapse: collapse; /* Collapse borders */
     margin-bottom: 25px;
     font-size: 18px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Light gray border */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 0.5s forwards; /* Fade in animation */
+    animation-delay: 0.5s; /* Delay before the table appears */
 }
 
+/* Table cell padding */
 .styled-table th, .styled-table td {
     padding: 12px 15px;
 }
 
+/* Table header styles */
 .styled-table thead tr {
-    background-color: #3498db;
-    color: white;
-    text-align: left;
+    background-color: #3498db; /* Blue header */
+    color: white; /* White text for header */
+    text-align: left; /* Left align text */
 }
 
+/* Alternate row coloring */
 .styled-table tr:nth-child(even) {
-    background-color: #f3f3f3;
+    background-color: #f3f3f3; /* Light gray background for even rows */
 }
 
+/* Row hover effect */
 .styled-table tr:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Light gray on hover */
 }
 
-.styled-table th {
-    background-color: #3498db;
-    color: white;
+/* Table header hover effect */
+.styled-table th:hover {
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
+/* Container styles */
 .container {
-    margin-top: 50px; 
+    margin-top: 50px; /* Space above container */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Start slightly above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
 }

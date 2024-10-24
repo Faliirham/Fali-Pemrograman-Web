@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $registerSuccess = "Registrasi berhasil. Silakan login.";
 
             // Pindahkan redirect ke sini sebelum output HTML
-            header("Location: login.php");
+            echo "<script>alert('Registrasi berhasil. Silakan login.'); window.location.href='login.php';</script>";
             exit();
         }
     } catch (PDOException $e) {
@@ -53,16 +53,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <!-- Menampilkan pesan sukses jika ada -->
         <?php if ($registerSuccess): ?>
-            <div class="success">
-                <?php echo $registerSuccess; ?>
-            </div>
+            <script>
+                alert('<?php echo $registerSuccess; ?>');
+            </script>
         <?php endif; ?>
 
         <!-- Menampilkan pesan error jika ada -->
         <?php if ($registerError): ?>
-            <div class="error">
-                <?php echo $registerError; ?>
-            </div>
+            <script>
+                alert('<?php echo $registerError; ?>');
+            </script>
         <?php endif; ?>
 
         <form action="register.php" method="POST">

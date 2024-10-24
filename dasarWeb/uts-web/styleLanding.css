@@ -1,80 +1,128 @@
-/* styles.css */
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #666;
-    margin-top: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('image-1.jpg'); /* Link ke gambar background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333; /* Warna teks netral */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-li {
-    margin: 10px;
-    flex: 1 1 calc(45% - 20px); /* Responsive cards */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-li:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-}
-
-a {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    padding: 15px;
-    background-color: #007BFF;
+/* Container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.85); /* Latar belakang putih dengan transparansi */
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    backdrop-filter: blur(10px); /* Efek blur di latar belakang */
 }
 
-a:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+/* Header styling */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50; /* Warna teks yang lebih gelap */
+    margin-bottom: 15px;
 }
 
-.logout {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: #dc3545;
+/* Penataan h2 dengan animasi */
+h2 {
+    font-size: 2rem;
+    color: #16a085; /* Warna hijau kebiruan yang segar */
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s forwards ease-in-out;
+}
+
+/* Animasi masuk */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation menu styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+ul li a {
+    font-size: 1.3rem;
+    text-decoration: none;
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-align: center;
+    padding: 12px 30px;
+    background-color: #2980b9; /* Warna biru terang */
+    border-radius: 40px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+ul li a:hover {
+    background-color: #16a085; /* Warna hijau kebiruan saat hover */
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Logout button styling */
+.logout {
+    font-size: 1.2rem;
+    color: white;
+    background-color: #e74c3c; /* Warna merah terang */
+    padding: 12px 40px;
+    border-radius: 30px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .logout:hover {
-    background-color: #c82333;
+    background-color: #c0392b; /* Warna merah lebih gelap saat hover */
+    transform: scale(1.05);
+}
+
+/* Footer styling */
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #7ba05b;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    ul li a {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+    .logout {
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
 }

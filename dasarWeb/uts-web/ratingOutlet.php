@@ -44,7 +44,6 @@ try {
     <h2>Rating Outlet</h2>
     <a href="landing.php" class="back-button">Back to Landing</a>
 
-    <!-- Dropdown for filtering ratings -->
     <label for="ratingFilter">Filter by Rating:</label>
     <select id="ratingFilter" onchange="filterTable()">
         <option value="">--Select Rating--</option>

@@ -6,6 +6,7 @@ $outlet_id_filter = $_GET['outlet_id'] ?? '';
 $date_filter = $_GET['date'] ?? '';
 $hour_filter = $_GET['hour'] ?? '';
 $month_filter = $_GET['month'] ?? '';
+$year_filter = $_GET['year'] ?? ''; // Add year filter
 
 // Build the SQL query with filters
 $sql = "SELECT * FROM CrowdData WHERE 1=1";
@@ -28,6 +29,10 @@ if ($month_filter) {
     $sql .= " AND Month = ?";
     $params[] = $month_filter;
 }
+if ($year_filter) { // Add filter condition for year
+    $sql .= " AND Year = ?";
+    $params[] = $year_filter;
+}
 
 $crowdData = query($sql, $params); // Fetch filtered data
 ?>
@@ -45,9 +50,7 @@ $crowdData = query($sql, $params); // Fetch filtered data
     <form method="GET">
         <select name="outlet_id">
             <option value="">Select Outlet</option>
-            <!-- Populate this select with outlets from the database -->
             <?php
-            // Example outlet options (replace with your query to fetch outlets)
             $outlets = query("SELECT DISTINCT OutletID FROM CrowdData");
             foreach ($outlets as $outlet) {
                 echo '<option value="' . htmlspecialchars($outlet['OutletID']) . '"' . ($outlet['OutletID'] == $outlet_id_filter ? ' selected' : '') . '>' . htmlspecialchars($outlet['OutletID']) . '</option>';
@@ -59,7 +62,26 @@ $crowdData = query($sql, $params); // Fetch filtered data
         
         <input type="number" name="hour" value="<?php echo htmlspecialchars($hour_filter); ?>" placeholder="Visit Hour">
         
-        <input type="number" name="month" value="<?php echo htmlspecialchars($month_filter); ?>" placeholder="Visit Month">
+        <!-- Month dropdown -->
+        <select name="month">
+            <option value="">Select Month</option>
+            <?php
+            for ($m = 1; $m <= 12; $m++) {
+                echo '<option value="' . $m . '"' . ($m == $month_filter ? ' selected' : '') . '>' . date('F', mktime(0, 0, 0, $m, 1)) . '</option>';
+            }
+            ?>
+        </select>
+
+        <!-- Year dropdown -->
+        <select name="year">
+            <option value="">Select Year</option>
+            <?php
+            $currentYear = date("Y");
+            for ($y = $currentYear; $y >= $currentYear - 10; $y--) { // Adjust range as needed
+                echo '<option value="' . $y . '"' . ($y == $year_filter ? ' selected' : '') . '>' . $y . '</option>';
+            }
+            ?>
+        </select>
         
         <button type="submit">Filter</button>
     </form>

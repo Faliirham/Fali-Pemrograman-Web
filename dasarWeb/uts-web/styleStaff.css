@@ -1,0 +1,93 @@
+/* Style untuk halaman */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Agar tabel dan konten berada di tengah */
+}
+
+h2 {
+    color: #333;
+}
+
+/* Style untuk tombol back */
+.back-button {
+    position: fixed; /* Membuat tombol berada di posisi tetap */
+    top: 20px; /* Posisi vertikal */
+    left: 20px; /* Posisi horizontal */
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Style untuk form filter */
+form {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+select {
+    padding: 5px;
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style untuk tabel */
+table {
+    width: 80%; /* Sesuaikan ukuran tabel */
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    text-align: center; /* Pusatkan teks dalam tabel */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
