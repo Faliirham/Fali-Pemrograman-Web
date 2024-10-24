@@ -5,12 +5,9 @@ body {
     padding: 20px;
     transition: background-color 0.5s ease; 
 }
-
 body:hover {
     background-color: #d9ebd7; 
 }
-
-
 .container {
     max-width: 800px;
     margin: auto;
@@ -20,8 +17,6 @@ body:hover {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out; 
 }
-
-
 h1 {
     color: #5a7d5a; 
     text-align: center;
@@ -30,24 +25,20 @@ h1 {
     text-transform: uppercase; 
     transition: color 0.3s ease; 
 }
-
 h2 {
     color: #768c76; 
     margin-top: 20px;
     font-size: 24px;
     text-align: center;
 }
-
 h1:hover {
     color: #5e7d5a; 
 }
-
 form {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
-
 input[type="text"] {
     padding: 12px;
     margin: 5px 0;
@@ -56,13 +47,11 @@ input[type="text"] {
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 input[type="text"]:focus {
     border-color: #7c9a77;
     box-shadow: 0 0 5px rgba(124, 154, 119, 0.5); 
     outline: none;
 }
-
 button {
     padding: 12px;
     margin-top: 10px;
@@ -74,24 +63,17 @@ button {
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.2s ease; 
 }
-
-
 button:hover {
     background-color: #5e7d5a; 
     transform: scale(1.05); 
 }
-
 button:active {
     transform: scale(0.98); 
 }
-
-
 ul {
     list-style-type: none;
     padding: 0;
 }
-
-
 li {
     padding: 12px;
     margin: 12px 0;
@@ -103,27 +85,20 @@ li {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
-
-
 li:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
     transform: translateY(-5px); 
 }
-
-
 li a {
     text-decoration: none;
     color: #7c9a77; 
     margin-left: 10px;
     transition: color 0.3s ease;
 }
-
-
 li a:hover {
     color: #5e7d5a; 
     text-decoration: underline;
 }
-
 .back-button {
     position: absolute;
     top: 20px;
@@ -135,7 +110,6 @@ li a:hover {
     border-radius: 6px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .back-button:hover {
     background-color: #5e7d5a; 
     transform: scale(1.05); 

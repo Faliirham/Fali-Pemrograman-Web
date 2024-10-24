@@ -5,14 +5,12 @@ body {
     padding: 20px;
     text-align: center;
 }
-
 h2 {
     color: #4A7C2A;
     margin-bottom: 20px;
     font-size: 2em;
     animation: fadeIn 0.5s ease-in-out;
 }
-
 .back-button {
     position: absolute;
     top: 20px;
@@ -24,25 +22,21 @@ h2 {
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s;
 }
-
 .back-button:hover {
     background-color: #5e7d5a;
     transform: scale(1.05);
 }
-
 .dropdown-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
-
 label {
     font-size: 16px;
     margin-right: 10px;
     align-self: center;
     color: #333;
 }
-
 #ratingFilter {
     padding: 10px;
     border: 1px solid #c8d6c3;
@@ -52,12 +46,10 @@ label {
     box-sizing: border-box;
     transition: border-color 0.3s, transform 0.2s;
 }
-
 #ratingFilter:focus {
     border-color: #4A7C2A;
     transform: scale(1.02);
 }
-
 .styled-table {
     width: 80%;
     margin: 0 auto;
@@ -70,33 +62,26 @@ label {
     animation: fadeIn 0.5s forwards;
     animation-delay: 0.5s;
 }
-
 .styled-table th, .styled-table td {
     padding: 12px 15px;
 }
-
 .styled-table thead tr {
     background-color: #3498db;
     color: white;
     text-align: left;
 }
-
 .styled-table tr:nth-child(even) {
     background-color: #f3f3f3;
 }
-
 .styled-table tr:hover {
     background-color: #ddd;
 }
-
 .styled-table th:hover {
     background-color: #2980b9;
 }
-
 .container {
     margin-top: 50px;
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;

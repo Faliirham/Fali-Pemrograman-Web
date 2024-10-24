@@ -8,13 +8,11 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 h1, h2 {
     color: #4A7C2A; 
     margin-bottom: 15px;
     text-align: center;
 }
-
 form {
     margin-bottom: 20px;
     padding: 20px;
@@ -24,7 +22,6 @@ form {
     width: 100%; 
     max-width: 500px; 
 }
-
 input[type="date"],
 input[type="number"],
 select {
@@ -35,14 +32,11 @@ select {
     width: calc(100% - 24px); 
     transition: border-color 0.3s; 
 }
-
 input[type="date"]:focus,
 input[type="number"]:focus,
 select:focus {
     border-color: #4A7C2A; 
 }
-
-
 button {
     padding: 12px 15px;
     background-color: #7c9a77; 
@@ -53,12 +47,9 @@ button {
     width: 100%; 
     transition: background-color 0.3s; 
 }
-
 button:hover {
     background-color: #5e7d5a; 
 }
-
-
 table {
     width: 100%; 
     max-width: 600px; 
@@ -69,27 +60,22 @@ table {
     overflow: hidden; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
-
 th, td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #dee2e6; 
 }
-
 th {
     background-color: #4A7C2A; 
     color: white; 
     font-weight: bold; 
 }
-
 tr:hover {
     background-color: #f0f4f0; 
 }
-
 td {
     color: #495057; 
 }
-
 .back-button {
     position: absolute;
     top: 20px; 
@@ -101,7 +87,6 @@ td {
     border-radius: 6px; 
     transition: background-color 0.3s; 
 }
-
 .back-button:hover {
     background-color: #5e7d5a; 
 }
