@@ -24,14 +24,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 
-
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
-    $conn->beginTransaction(); 
+    $conn->beginTransaction();
 
     try {
+        // Hapus data terkait di semua tabel yang menggunakan OutletID 
         execute("DELETE FROM dbo.FavoriteMenus WHERE OutletID = ?", [$id]);
+        execute("DELETE FROM dbo.CrowdData WHERE OutletID = ?", [$id]);
+        execute("DELETE FROM dbo.Ratings WHERE OutletID = ?", [$id]);
+        execute("DELETE FROM dbo.Staff WHERE OutletID =?", [$id]);
 
+        // Hapus data OutletID
         execute("DELETE FROM dbo.Outlets WHERE OutletID = ?", [$id]);
 
         $conn->commit(); 
@@ -42,7 +46,6 @@ if (isset($_GET['delete'])) {
         echo "Gagal menghapus data: " . $e->getMessage();
     }
 }
-
 
 
 $outlets = query("SELECT * FROM dbo.Outlets");
