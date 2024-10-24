@@ -5,11 +5,10 @@ $selected_week = $_GET['week'] ?? '';
 $selected_month = $_GET['month'] ?? '';
 $selected_year = $_GET['year'] ?? '';
 
-$query = "SELECT fm.MenuID, fm.MenuName, fm.Week, fm.Month, fm.Year, o.OutletName 
+$query = "SELECT DISTINCT fm.MenuID, fm.MenuName, fm.Week, fm.Month, fm.Year, o.OutletName, fm.OrderCount 
           FROM dbo.FavoriteMenus fm 
           JOIN dbo.Outlets o ON fm.OutletID = o.OutletID 
           WHERE fm.OrderCount > 100"; 
-
 
 $params = [];
 
@@ -26,7 +25,8 @@ if ($selected_year) {
     $params[] = $selected_year;
 }
 
-// Execute the query with the parameters
+$query .= " ORDER BY fm.OrderCount DESC";
+
 $favorites = query($query, $params);
 ?>
 
@@ -79,6 +79,7 @@ $favorites = query($query, $params);
                     <div class="info">Week: <?php echo htmlspecialchars($favorite['Week']); ?></div>
                     <div class="info">Month: <?php echo htmlspecialchars($favorite['Month']); ?></div>
                     <div class="info">Year: <?php echo htmlspecialchars($favorite['Year']); ?></div>
+                    <div class="info">Order Count: <?php echo htmlspecialchars($favorite['OrderCount']); ?></div>
                 </li>
             <?php endforeach; ?>
         <?php else: ?>
