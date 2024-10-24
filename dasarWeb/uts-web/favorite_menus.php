@@ -10,7 +10,7 @@ $selected_year = $_GET['year'] ?? '';
 $query = "SELECT fm.MenuID, fm.MenuName, fm.Week, fm.Month, fm.Year, o.OutletName 
           FROM dbo.FavoriteMenus fm 
           JOIN dbo.Outlets o ON fm.OutletID = o.OutletID 
-          WHERE fm.OrderCount > 100"; // Condition for OrderCount
+          WHERE fm.OrderCount > 100"; 
 
 // Append filters to the query
 if ($selected_week) {
