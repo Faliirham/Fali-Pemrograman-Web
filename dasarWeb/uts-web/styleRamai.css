@@ -1,7 +1,7 @@
-/* Global styles */
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e6f2e1; /* Matcha background */
+    background-color: #e6f2e1; 
     margin: 0;
     padding: 20px;
     display: flex;
@@ -9,104 +9,99 @@ body {
     align-items: center;
 }
 
-/* Headings */
 h1, h2 {
-    color: #4A7C2A; /* Darker matcha green */
+    color: #4A7C2A; 
     margin-bottom: 15px;
     text-align: center;
 }
 
-/* Form styling */
 form {
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #ffffff; /* White background for form */
-    border-radius: 10px; /* Slightly larger border radius */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More prominent shadow */
-    width: 100%; /* Ensure the form takes full width */
-    max-width: 500px; /* Limit the width for better appearance */
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 500px; 
 }
 
-/* Input fields */
 input[type="date"],
 input[type="number"],
 select {
     padding: 12px;
     margin: 10px 0;
-    border: 1px solid #c8d6c3; /* Light green border */
-    border-radius: 6px; /* Slightly larger border radius */
-    width: calc(100% - 24px); /* Adjust width for padding */
-    transition: border-color 0.3s; /* Smooth transition for border color */
+    border: 1px solid #c8d6c3;
+    border-radius: 6px; 
+    width: calc(100% - 24px); 
+    transition: border-color 0.3s; 
 }
 
 input[type="date"]:focus,
 input[type="number"]:focus,
 select:focus {
-    border-color: #4A7C2A; /* Darker matcha on focus */
+    border-color: #4A7C2A; 
 }
 
-/* Button styling */
+
 button {
     padding: 12px 15px;
-    background-color: #7c9a77; /* Matcha button */
+    background-color: #7c9a77; 
     color: white;
     border: none;
-    border-radius: 6px; /* Consistent radius with inputs */
+    border-radius: 6px; 
     cursor: pointer;
-    width: 100%; /* Make button full width */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 100%; 
+    transition: background-color 0.3s; 
 }
 
 button:hover {
-    background-color: #5e7d5a; /* Darker matcha on hover */
+    background-color: #5e7d5a; 
 }
 
-/* Table styling */
+
 table {
-    width: 100%; /* Full width */
-    max-width: 600px; /* Limit the width for better appearance */
-    border-collapse: collapse; /* Collapse borders */
-    margin-top: 20px; /* Space above the table */
-    background-color: #ffffff; /* White background for the table */
-    border-radius: 10px; /* Rounded corners for table */
-    overflow: hidden; /* Prevent overflow for rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+    width: 100%; 
+    max-width: 600px; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
-/* Table header and data */
 th, td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #dee2e6; /* Light gray border for table rows */
+    border-bottom: 1px solid #dee2e6; 
 }
 
 th {
-    background-color: #4A7C2A; /* Matcha green header */
-    color: white; /* White text for header */
-    font-weight: bold; /* Bold font for header */
+    background-color: #4A7C2A; 
+    color: white; 
+    font-weight: bold; 
 }
 
 tr:hover {
-    background-color: #f0f4f0; /* Light gray background on row hover */
+    background-color: #f0f4f0; 
 }
 
 td {
-    color: #495057; /* Dark gray text for better readability */
+    color: #495057; 
 }
 
-/* Back button styling */
 .back-button {
-    position: absolute; /* Keep the button absolute positioned */
-    top: 20px; /* Adjust vertical position */
-    left: 20px; /* Adjust horizontal position */
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
     padding: 10px 15px;
-    background-color: #7c9a77; /* Matcha green button */
+    background-color: #7c9a77; 
     color: white;
     text-decoration: none;
-    border-radius: 6px; /* Match with the other elements */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    border-radius: 6px; 
+    transition: background-color 0.3s; 
 }
 
 .back-button:hover {
-    background-color: #5e7d5a; /* Darker shade on hover */
+    background-color: #5e7d5a; 
 }

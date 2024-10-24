@@ -1,21 +1,20 @@
 <?php
 require 'database.php';
 
-// Ambil daftar Outlet untuk dropdown
+
 $outlets_sql = "SELECT OutletID, OutletName FROM Outlets";
 $outlets_result = $conn->query($outlets_sql);
 
-// Ambil nilai filter dari request
 $selected_outlet = isset($_GET['outlet']) ? $_GET['outlet'] : '';
 $selected_workday = isset($_GET['workday']) ? $_GET['workday'] : '';
 
-// Buat query SQL dengan kondisi filter
+
 $sql = "SELECT o.OutletName, s.StaffName, s.Shift, s.WorkDay
         FROM Staff s
         JOIN Outlets o ON s.OutletID = o.OutletID
         WHERE 1 = 1";
 
-// Tambahkan kondisi filter jika ada
+
 if ($selected_outlet) {
     $sql .= " AND s.OutletID = :outlet";
 }
@@ -25,7 +24,7 @@ if ($selected_workday) {
 
 $stmt = $conn->prepare($sql);
 
-// Bind parameter untuk filter
+
 if ($selected_outlet) {
     $stmt->bindParam(':outlet', $selected_outlet, PDO::PARAM_INT);
 }
@@ -46,7 +45,7 @@ $stmt->execute();
 </head>
 <body>
     <h2>List Staff dan Shift</h2>
-    <a href="landing.php" class="back-button">Back to Landing</a>
+    <a href="landing.php" class="back-button">Kembali Ke Dashboard</a>
 
     <!-- Form Filter -->
     <form method="GET" action="">
@@ -75,7 +74,7 @@ $stmt->execute();
         <button type="submit">Filter</button>
     </form>
 
-    <!-- Tabel Data -->
+
     <table border="1">
         <tr>
             <th>Outlet Name</th>

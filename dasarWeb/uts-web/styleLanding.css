@@ -1,19 +1,18 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('image-1.jpg'); /* Link ke gambar background */
+    background-image: url('image-1.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #333; /* Warna teks netral */
+    color: #333; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-/* Container styling */
 .container {
-    background-color: rgba(255, 255, 255, 0.85); /* Latar belakang putih dengan transparansi */
+    background-color: rgba(255, 255, 255, 0.85); 
     border-radius: 20px;
     padding: 40px;
     max-width: 700px;
@@ -21,20 +20,18 @@ body {
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
     position: relative;
-    backdrop-filter: blur(10px); /* Efek blur di latar belakang */
+    backdrop-filter: blur(10px); 
 }
 
-/* Header styling */
 h1 {
     font-size: 2.5rem;
-    color: #2c3e50; /* Warna teks yang lebih gelap */
+    color: #2c3e50; 
     margin-bottom: 15px;
 }
 
-/* Penataan h2 dengan animasi */
 h2 {
     font-size: 2rem;
-    color: #16a085; /* Warna hijau kebiruan yang segar */
+    color: #16a085; 
     margin-bottom: 30px;
     text-align: center;
     opacity: 0;
@@ -42,7 +39,6 @@ h2 {
     animation: fadeIn 1.5s forwards ease-in-out;
 }
 
-/* Animasi masuk */
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -50,7 +46,6 @@ h2 {
     }
 }
 
-/* Navigation menu styling */
 ul {
     list-style: none;
     padding: 0;
@@ -66,23 +61,22 @@ ul li a {
     text-decoration: none;
     color: white;
     padding: 12px 30px;
-    background-color: #2980b9; /* Warna biru terang */
+    background-color: #2980b9; 
     border-radius: 40px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
 }
 
 ul li a:hover {
-    background-color: #16a085; /* Warna hijau kebiruan saat hover */
+    background-color: #16a085; 
     color: white;
     transform: scale(1.05);
 }
 
-/* Logout button styling */
 .logout {
     font-size: 1.2rem;
     color: white;
-    background-color: #e74c3c; /* Warna merah terang */
+    background-color: #e74c3c; 
     padding: 12px 40px;
     border-radius: 30px;
     text-decoration: none;
@@ -92,11 +86,10 @@ ul li a:hover {
 }
 
 .logout:hover {
-    background-color: #c0392b; /* Warna merah lebih gelap saat hover */
+    background-color: #c0392b; 
     transform: scale(1.05);
 }
 
-/* Footer styling */
 footer {
     position: absolute;
     bottom: 10px;
@@ -106,7 +99,6 @@ footer {
     color: #7ba05b;
 }
 
-/* Responsive styling */
 @media (max-width: 600px) {
     h1 {
         font-size: 2rem;

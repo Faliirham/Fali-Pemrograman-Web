@@ -1,18 +1,17 @@
 <?php
 require 'database.php';
 
-// Initialize filter variables
 $outlet_id_filter = $_GET['outlet_id'] ?? '';
 $date_filter = $_GET['date'] ?? '';
 $hour_filter = $_GET['hour'] ?? '';
 $month_filter = $_GET['month'] ?? '';
-$year_filter = $_GET['year'] ?? ''; // Add year filter
+$year_filter = $_GET['year'] ?? ''; 
 
-// Build the SQL query with filters
+
 $sql = "SELECT * FROM CrowdData WHERE 1=1";
 $params = [];
 
-// Apply filters if set
+
 if ($outlet_id_filter) {
     $sql .= " AND OutletID = ?";
     $params[] = $outlet_id_filter;
@@ -29,12 +28,12 @@ if ($month_filter) {
     $sql .= " AND Month = ?";
     $params[] = $month_filter;
 }
-if ($year_filter) { // Add filter condition for year
+if ($year_filter) { 
     $sql .= " AND Year = ?";
     $params[] = $year_filter;
 }
 
-$crowdData = query($sql, $params); // Fetch filtered data
+$crowdData = query($sql, $params); 
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +45,7 @@ $crowdData = query($sql, $params); // Fetch filtered data
 </head>
 <body>
     <h1>View Popularities</h1>
-    <a href="landing.php" class="back-button">Back to Landing</a>
+    <a href="landing.php" class="back-button">Kembali Ke Dashboard</a>
     <form method="GET">
         <select name="outlet_id">
             <option value="">Select Outlet</option>
@@ -62,7 +61,7 @@ $crowdData = query($sql, $params); // Fetch filtered data
         
         <input type="number" name="hour" value="<?php echo htmlspecialchars($hour_filter); ?>" placeholder="Visit Hour">
         
-        <!-- Month dropdown -->
+   
         <select name="month">
             <option value="">Select Month</option>
             <?php
@@ -72,7 +71,7 @@ $crowdData = query($sql, $params); // Fetch filtered data
             ?>
         </select>
 
-        <!-- Year dropdown -->
+        
         <select name="year">
             <option value="">Select Year</option>
             <?php

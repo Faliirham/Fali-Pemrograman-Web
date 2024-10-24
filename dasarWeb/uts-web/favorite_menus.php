@@ -1,18 +1,17 @@
 <?php
 require 'database.php';
 
-// Initialize filter variables
+
 $selected_week = $_GET['week'] ?? '';
 $selected_month = $_GET['month'] ?? '';
 $selected_year = $_GET['year'] ?? '';
 
-// Prepare the SQL query with filtering
 $query = "SELECT fm.MenuID, fm.MenuName, fm.Week, fm.Month, fm.Year, o.OutletName 
           FROM dbo.FavoriteMenus fm 
           JOIN dbo.Outlets o ON fm.OutletID = o.OutletID 
           WHERE fm.OrderCount > 100"; 
 
-// Append filters to the query
+
 if ($selected_week) {
     $query .= " AND fm.Week = ?";
 }
@@ -23,10 +22,9 @@ if ($selected_year) {
     $query .= " AND fm.Year = ?";
 }
 
-// Prepare parameters for the query
 $params = array_filter([$selected_week, $selected_month, $selected_year]);
 
-// Fetch filtered favorite menus
+
 $favorites = query($query, $params);
 ?>
 
@@ -40,7 +38,7 @@ $favorites = query($query, $params);
 <body>
     <h1>Favorite Menu List</h1>
 
-    <a href="landing.php" class="back-button">Back to Landing</a>
+    <a href="landing.php" class="back-button">Kembali Ke Dashboard</a>
     <div class="filter-form">
         <form method="GET">
             <select name="week">

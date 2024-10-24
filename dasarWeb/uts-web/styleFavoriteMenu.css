@@ -1,91 +1,87 @@
-/* Global styles */
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e6f2e1; /* Matcha background */
+    background-color: #e6f2e1; 
     color: #343a40;
     margin: 0;
     padding: 20px;
 }
 
-/* Main heading */
+
 h1 {
     text-align: center;
-    color: #4A7C2A; /* Matcha green */
+    color: #4A7C2A; 
     margin-bottom: 30px;
-    font-size: 2em; /* Larger font size for emphasis */
+    font-size: 2em; 
 }
 
-/* List styles */
+
 ul {
     list-style-type: none;
     padding: 0;
 }
 
-/* List item styling */
+
 li {
-    background-color: #ffffff; /* White background */
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
     padding: 15px;
     margin-bottom: 15px;
-    transition: box-shadow 0.3s, transform 0.2s; /* Transition for shadow and scale */
+    transition: box-shadow 0.3s, transform 0.2s; 
 }
 
 li:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px); 
 }
 
-/* Menu name styling */
+
 .menu-name {
     font-weight: bold;
     font-size: 1.2em;
-    color: #28a745; /* Matcha green for emphasis */
+    color: #28a745;
 }
 
-/* Outlet name styling */
 .outlet-name {
     font-style: italic;
-    color: #6c757d; /* Gray color for outlet name */
+    color: #6c757d;
 }
 
-/* Info styling */
 .info {
     margin: 5px 0;
 }
 
-/* Filter form styling */
 .filter-form {
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Filter form select styling */
+
 .filter-form select {
     margin: 0 5px;
-    padding: 10px; /* More padding for better appearance */
-    border: 1px solid #c8d6c3; /* Light green border */
-    border-radius: 5px; /* Consistent border radius */
-    transition: border-color 0.3s; /* Transition for border color */
+    padding: 10px; 
+    border: 1px solid #c8d6c3; 
+    border-radius: 5px; 
+    transition: border-color 0.3s; 
 }
 
 .filter-form select:focus {
-    border-color: #4A7C2A; /* Darker matcha on focus */
+    border-color: #4A7C2A; 
 }
 
-/* Back button styling */
 .back-button {
-    position: absolute; /* Absolute positioning */
-    top: 20px; /* Adjust vertical position */
-    left: 20px; /* Adjust horizontal position */
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
     padding: 10px 15px;
-    background-color: #4A7C2A; /* Matcha green */
+    background-color: #4A7C2A; 
     color: white;
     text-decoration: none;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Transition for background color */
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
 }
 
 .back-button:hover {
-    background-color: #5e7d5a; /* Darker shade on hover */
+    background-color: #5e7d5a; 
 }

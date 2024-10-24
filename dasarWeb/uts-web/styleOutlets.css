@@ -1,20 +1,16 @@
-/* styles.css */
-
-/* Reset styles and apply font */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e6f2e1; /* Matcha background */
+    background-color: #e6f2e1; 
     margin: 0;
     padding: 20px;
-    transition: background-color 0.5s ease; /* Smooth transition for background */
+    transition: background-color 0.5s ease; 
 }
 
-/* Smooth color change for body when interacting */
 body:hover {
-    background-color: #d9ebd7; /* Slightly darker matcha on hover */
+    background-color: #d9ebd7; 
 }
 
-/* Container styling with fade-in animation */
+
 .container {
     max-width: 800px;
     margin: auto;
@@ -22,135 +18,125 @@ body:hover {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-out; /* Smooth fade-in on load */
+    animation: fadeIn 1s ease-out; 
 }
 
 
-/* Main heading */
 h1 {
-    color: #5a7d5a; /* Matcha green heading */
+    color: #5a7d5a; 
     text-align: center;
     font-size: 32px;
-    letter-spacing: 1px; /* Add spacing for a cleaner look */
-    text-transform: uppercase; /* Make it more pronounced */
-    transition: color 0.3s ease; /* Smooth transition for color */
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    transition: color 0.3s ease; 
 }
 
-/* Subheading */
 h2 {
-    color: #768c76; /* Softer matcha green */
+    color: #768c76; 
     margin-top: 20px;
     font-size: 24px;
     text-align: center;
 }
 
-/* Interactive color change on heading hover */
 h1:hover {
-    color: #5e7d5a; /* Darker matcha green on hover */
+    color: #5e7d5a; 
 }
 
-/* Form styling */
 form {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-/* Input fields with focus animation */
 input[type="text"] {
     padding: 12px;
     margin: 5px 0;
-    border: 1px solid #c8d6c3; /* Light green border */
+    border: 1px solid #c8d6c3;
     border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Input focus effect */
 input[type="text"]:focus {
     border-color: #7c9a77;
-    box-shadow: 0 0 5px rgba(124, 154, 119, 0.5); /* Subtle glow effect */
+    box-shadow: 0 0 5px rgba(124, 154, 119, 0.5); 
     outline: none;
 }
 
-/* Button styling with interactive scaling */
 button {
     padding: 12px;
     margin-top: 10px;
-    background-color: #7c9a77; /* Matcha button */
+    background-color: #7c9a77; 
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth scaling */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
-/* Button hover effect with scaling */
+
 button:hover {
-    background-color: #5e7d5a; /* Darker matcha on hover */
-    transform: scale(1.05); /* Slight scaling effect */
+    background-color: #5e7d5a; 
+    transform: scale(1.05); 
 }
 
-/* Button press effect */
 button:active {
-    transform: scale(0.98); /* Shrink slightly on press */
+    transform: scale(0.98); 
 }
 
-/* List styling */
+
 ul {
     list-style-type: none;
     padding: 0;
 }
 
-/* List item styling with hover interaction */
+
 li {
     padding: 12px;
     margin: 12px 0;
-    background-color: #edf4ed; /* Matcha green light background */
+    background-color: #edf4ed; 
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 
-/* Hover effect on list items */
+
 li:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-    transform: translateY(-5px); /* Lift slightly on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px); 
 }
 
-/* Link inside list with smooth hover effect */
+
 li a {
     text-decoration: none;
-    color: #7c9a77; /* Matcha green links */
+    color: #7c9a77; 
     margin-left: 10px;
     transition: color 0.3s ease;
 }
 
-/* Link hover effect */
+
 li a:hover {
-    color: #5e7d5a; /* Darker matcha on hover */
+    color: #5e7d5a; 
     text-decoration: underline;
 }
 
-/* Back button styling */
 .back-button {
     position: absolute;
     top: 20px;
     left: 20px;
     padding: 10px 15px;
-    background-color: #7c9a77; /* Matcha green button */
+    background-color: #7c9a77; 
     color: white;
     text-decoration: none;
     border-radius: 6px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Back button hover effect */
 .back-button:hover {
-    background-color: #5e7d5a; /* Darker matcha green on hover */
-    transform: scale(1.05); /* Slight scaling animation on hover */
+    background-color: #5e7d5a; 
+    transform: scale(1.05); 
 }

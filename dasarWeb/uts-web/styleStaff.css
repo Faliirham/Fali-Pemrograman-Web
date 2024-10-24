@@ -1,34 +1,36 @@
-/* Style untuk halaman */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 20px;
-    background-color: #f4f4f4;
+    background-color: #e6f2e1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Agar tabel dan konten berada di tengah */
+    align-items: center;
 }
 
 h2 {
-    color: #333;
+    color: #4A7C2A;
+    margin-bottom: 20px;
+    font-size: 2em;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Style untuk tombol back */
 .back-button {
-    position: fixed; /* Membuat tombol berada di posisi tetap */
-    top: 20px; /* Posisi vertikal */
-    left: 20px; /* Posisi horizontal */
+    position: fixed;
+    top: 20px;
+    left: 20px;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #4A7C2A;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .back-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #5e7d5a;
+    transform: scale(1.05);
 }
 
-/* Style untuk form filter */
 form {
     margin-bottom: 20px;
     background-color: #fff;
@@ -40,13 +42,19 @@ form {
 label {
     margin-right: 10px;
     font-weight: bold;
+    color: #333;
 }
 
 select {
     padding: 5px;
     margin-right: 20px;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid #c8d6c3;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #4A7C2A;
 }
 
 button {
@@ -56,19 +64,21 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-/* Style untuk tabel */
 table {
-    width: 80%; /* Sesuaikan ukuran tabel */
+    width: 80%;
     border-collapse: collapse;
     margin-top: 20px;
     background-color: #fff;
-    text-align: center; /* Pusatkan teks dalam tabel */
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
 }
 
 table, th, td {
@@ -81,13 +91,25 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #4A7C2A;
+    color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f3f7f1;
 }
 
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #dcedc8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

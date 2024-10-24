@@ -7,7 +7,7 @@ body, h2, p {
 body {
     font-family: Arial, sans-serif;
     background-image: url('image-1.jpg');
-    background-color: #d2e6d0; /* Matcha soft green background */
+    background-color: #d2e6d0; 
     color: #333;
     display: flex;
     justify-content: center;
@@ -15,7 +15,6 @@ body {
     height: 100vh;
 }
 
-/* Container for the login form */
 .login-container {
     background-color: #fff;
     padding: 30px;
@@ -25,14 +24,12 @@ body {
     text-align: center;
 }
 
-/* Header style */
 .login-container h2 {
     margin-bottom: 20px;
-    color: #658e76; /* Matcha green for header */
+    color: #658e76; 
     font-size: 24px;
 }
 
-/* Input field styles */
 .login-container input[type="text"],
 .login-container input[type="password"] {
     width: 100%;
@@ -40,23 +37,21 @@ body {
     margin: 12px 0;
     border: 1px solid #b0c7a1;
     border-radius: 6px;
-    box-sizing: border-box; /* Includes padding in width */
+    box-sizing: border-box; 
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Focus effect for input fields */
 .login-container input[type="text"]:focus,
 .login-container input[type="password"]:focus {
-    border-color: #8ca78b; /* Softer green border on focus */
-    background-color: #f4f9f4; /* Light matcha background on focus */
+    border-color: #8ca78b; 
+    background-color: #f4f9f4; 
     outline: none;
 }
 
-/* Button styles */
 .login-container button {
     width: 100%;
     padding: 12px;
-    background-color: #8ca78b; /* Matcha green button */
+    background-color: #8ca78b; 
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -65,27 +60,23 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Button hover effect */
 .login-container button:hover {
-    background-color: #708c6b; /* Darker matcha green on hover */
+    background-color: #708c6b; 
     transform: scale(1.03);
 }
 
-/* Paragraph styles */
 .login-container p {
     margin-top: 15px;
     font-size: 14px;
-    color: #658e76; /* Matcha green for text */
+    color: #658e76; 
 }
 
-/* Link styles */
 .login-container a {
     color: #8ca78b;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Link hover effect */
 .login-container a:hover {
-    color: #708c6b; /* Darker matcha green on hover */
+    color: #708c6b; 
 }
