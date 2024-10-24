@@ -1,7 +1,6 @@
 <?php
 require 'database.php';
 
-
 $selected_week = $_GET['week'] ?? '';
 $selected_month = $_GET['month'] ?? '';
 $selected_year = $_GET['year'] ?? '';
@@ -12,19 +11,22 @@ $query = "SELECT fm.MenuID, fm.MenuName, fm.Week, fm.Month, fm.Year, o.OutletNam
           WHERE fm.OrderCount > 100"; 
 
 
+$params = [];
+
 if ($selected_week) {
     $query .= " AND fm.Week = ?";
+    $params[] = $selected_week;
 }
 if ($selected_month) {
     $query .= " AND fm.Month = ?";
+    $params[] = $selected_month;
 }
 if ($selected_year) {
     $query .= " AND fm.Year = ?";
+    $params[] = $selected_year;
 }
 
-$params = array_filter([$selected_week, $selected_month, $selected_year]);
-
-
+// Execute the query with the parameters
 $favorites = query($query, $params);
 ?>
 
@@ -43,7 +45,7 @@ $favorites = query($query, $params);
         <form method="GET">
             <select name="week">
                 <option value="">Select Week</option>
-                <?php for ($i = 1; $i <= 52; $i++): ?>
+                <?php for ($i = 1; $i <= 4; $i++): ?>
                     <option value="<?php echo $i; ?>" <?php echo ($selected_week == $i) ? 'selected' : ''; ?>>
                         Week <?php echo $i; ?></option>
                 <?php endfor; ?>
