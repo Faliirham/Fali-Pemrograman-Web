@@ -27,12 +27,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
-    execute("DELETE FROM dbo.Outlets WHERE OutletID = ?", [$id]);
-    
+    $conn->beginTransaction(); 
 
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit;
+    try {
+        execute("DELETE FROM dbo.FavoriteMenus WHERE OutletID = ?", [$id]);
+
+        execute("DELETE FROM dbo.Outlets WHERE OutletID = ?", [$id]);
+
+        $conn->commit(); 
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    } catch (Exception $e) {
+        $conn->rollBack(); 
+        echo "Gagal menghapus data: " . $e->getMessage();
+    }
 }
+
 
 
 $outlets = query("SELECT * FROM dbo.Outlets");
